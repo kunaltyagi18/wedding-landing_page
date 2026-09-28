@@ -25,8 +25,8 @@ export function Navbar({ onEnquire }: { onEnquire: () => void }) {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/20 bg-cream/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 lg:px-10">
-        <button onClick={() => nav("top")} aria-label="Ananta Sutra home" className="relative ml-1.5 lg:ml-10 z-50">
-          <span className="flex h-16 w-16 translate-y-3 items-center justify-center rounded-full border-[3px] border-gold bg-cream text-center font-serif text-[10px] leading-tight text-maroon shadow-md ring-4 ring-maroon lg:h-20 lg:w-20 lg:translate-y-4 lg:text-xs">
+        <button onClick={() => nav("top")} aria-label="Ananta Sutra home" className="relative lg:ml-10">
+          <span className="flex h-14 w-14 translate-y-3 items-center justify-center rounded-full border-[3px] border-gold bg-cream text-center font-serif text-[10px] leading-tight text-maroon shadow-md ring-4 ring-maroon lg:h-20 lg:w-20 lg:translate-y-4 lg:text-xs">
             ANANTA<br />SUTRA
           </span>
         </button>
