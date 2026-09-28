@@ -15,7 +15,7 @@ const avatars = [
 export function Hero({ onEnquire, onVideo }: { onEnquire: () => void; onVideo: () => void }) {
   return (
     <section id="top" className="relative overflow-hidden bg-cream-deep">
-      <div className="grid lg:min-h-[410px] lg:grid-cols-[42%_58%]">
+      <div className="flex flex-col-reverse lg:grid lg:min-h-[410px] lg:grid-cols-[42%_58%]">
         <div className="reveal relative z-10 px-6 py-12 lg:py-10 lg:pl-[6.5vw] lg:pr-0">
           <p className="text-[9px] tracking-[0.35em] text-maroon-dark/70 sm:text-[10px]">
             TIMELESS PLANNING &nbsp;|&nbsp; MEANINGFUL MOMENTS &nbsp;|&nbsp; YOURS, ALWAYS
@@ -49,7 +49,7 @@ export function Hero({ onEnquire, onVideo }: { onEnquire: () => void; onVideo: (
             <span className="font-serif text-sm text-maroon-dark">200+ Happy Families</span>
           </div>
         </div>
-        <div className="relative h-[40vh] min-h-[300px] sm:h-96 lg:h-auto order-first lg:order-last">
+        <div className="relative h-[40vh] min-h-[300px] sm:h-96 lg:h-auto">
           <Image src={hero} alt="Bride and groom under a floral mandap at sunset" fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="absolute inset-0 object-cover" />
           <div className="absolute inset-y-0 left-0 hidden w-32 bg-gradient-to-r from-cream-deep to-transparent lg:block" />
         </div>
