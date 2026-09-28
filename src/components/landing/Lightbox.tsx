@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Modal } from "./Modal";

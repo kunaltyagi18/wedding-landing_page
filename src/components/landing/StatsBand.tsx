@@ -1,3 +1,5 @@
+"use client";
+
 import { go } from "./Navbar";
 
 const stats = [["200+", "Happy Families"], ["50+", "Destination Weddings"], ["4.9★", "Client Satisfaction"]];

@@ -1,3 +1,5 @@
+"use client";
+
 // Floating WhatsApp button — bottom-right corner
 export function WhatsAppButton() {
   return (

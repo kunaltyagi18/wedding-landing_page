@@ -1,3 +1,5 @@
+"use client";
+
 import { Gem, Flower2, MapPin, Users } from "lucide-react";
 
 const items = [

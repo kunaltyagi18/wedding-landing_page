@@ -1,3 +1,5 @@
+"use client";
+
 import { Modal } from "./Modal";
 
 export function VideoModal({ open, onClose }: { open: boolean; onClose: () => void }) {

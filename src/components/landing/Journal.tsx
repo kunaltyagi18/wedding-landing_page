@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight, CalendarDays } from "lucide-react";
 
 const posts = [

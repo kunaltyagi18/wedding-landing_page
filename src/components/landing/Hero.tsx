@@ -1,5 +1,8 @@
+"use client";
+
 import { Play } from "lucide-react";
-import hero from "@/assets/hero-couple.jpg";
+import heroImg from "@/assets/hero-couple.jpg";
+const hero = heroImg.src;
 
 const avatars = [
   "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop",
