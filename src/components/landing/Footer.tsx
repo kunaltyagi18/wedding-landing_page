@@ -169,7 +169,7 @@ export function Footer() {
             </p>
             {newsletterDone ? (
               <p className="mt-5 font-serif text-[13px] text-gold">
-                ✓ You're subscribed! Welcome to the family.
+                ✓ You&apos;re subscribed! Welcome to the family.
               </p>
             ) : (
               <form onSubmit={handleNewsletter} className="mt-5 flex flex-col gap-3">

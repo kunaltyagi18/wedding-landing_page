@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Play } from "lucide-react";
 import heroImg from "@/assets/hero-couple.jpg";
 const hero = heroImg.src;
@@ -40,14 +41,16 @@ export function Hero({ onEnquire, onVideo }: { onEnquire: () => void; onVideo: (
           <div className="mt-6 flex items-center gap-3 border-b border-gold/30 pb-2 sm:w-72">
             <div className="flex -space-x-2">
               {avatars.map((a) => (
-                <img key={a} src={a} alt="" loading="lazy" className="h-8 w-8 rounded-full border-2 border-cream object-cover" />
+                <div key={a} className="relative h-8 w-8 shrink-0">
+                  <Image src={a} alt="" fill sizes="32px" className="rounded-full border-2 border-cream object-cover" />
+                </div>
               ))}
             </div>
             <span className="font-serif text-sm text-maroon-dark">200+ Happy Families</span>
           </div>
         </div>
         <div className="relative h-72 sm:h-96 lg:h-auto">
-          <img src={hero} alt="Bride and groom under a floral mandap at sunset" className="absolute inset-0 h-full w-full object-cover" />
+          <Image src={hero} alt="Bride and groom under a floral mandap at sunset" fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="absolute inset-0 object-cover" />
           <div className="absolute inset-y-0 left-0 hidden w-32 bg-gradient-to-r from-cream-deep to-transparent lg:block" />
         </div>
       </div>

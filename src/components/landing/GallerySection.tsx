@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
 const galleryImages = [
@@ -87,7 +88,7 @@ export function Gallery() {
             <p className="text-[10px] tracking-[0.45em] text-gold">OUR WORK</p>
             <div className="mx-auto mt-3 h-px w-10 bg-gold/50" />
             <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-maroon-dark sm:text-5xl">
-              Moments We've <em className="text-maroon">Crafted.</em>
+              Moments We&apos;ve <em className="text-maroon">Crafted.</em>
             </h2>
             <p className="mx-auto mt-4 max-w-lg font-serif text-[15px] leading-snug text-maroon-dark/70">
               Every frame tells a story of love, tradition and meticulous artistry.
@@ -107,11 +108,12 @@ export function Gallery() {
                 tabIndex={0}
                 onKeyDown={(e) => e.key === "Enter" && setLb(i)}
               >
-                <img
+                <Image
                   src={img.src}
                   alt={img.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-maroon-dark/0 transition-all duration-300 group-hover:bg-maroon-dark/40" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:opacity-100">
@@ -155,11 +157,15 @@ export function Gallery() {
             className="relative mx-16 max-h-[85vh] max-w-4xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={galleryImages[lb].src.replace("w=800", "w=1200")}
-              alt={galleryImages[lb].alt}
-              className="max-h-[85vh] w-auto rounded-sm object-contain shadow-2xl"
-            />
+            <div className="relative w-full" style={{ minHeight: "60vh" }}>
+              <Image
+                src={galleryImages[lb].src.replace("w=800", "w=1200")}
+                alt={galleryImages[lb].alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 1200px"
+                className="rounded-sm object-contain shadow-2xl"
+              />
+            </div>
             <p className="mt-3 text-center font-serif text-sm tracking-wide text-cream/70">
               {galleryImages[lb].alt}
             </p>

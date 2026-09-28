@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Modal } from "./Modal";
 
@@ -20,7 +21,9 @@ export function Lightbox({ images, index, onChange, onClose }: { images: Img[]; 
   const btn = "absolute top-1/2 -translate-y-1/2 rounded-full border border-cream/50 bg-maroon-dark/60 p-3 text-cream transition hover:bg-gold hover:text-maroon-dark active:scale-90";
   return (
     <Modal open={open} onClose={onClose} dark className="max-w-3xl">
-      <img src={images[i]?.src} alt={images[i]?.title} className="max-h-[80vh] w-full object-contain" />
+      <div className="relative max-h-[80vh] w-full" style={{ minHeight: "300px" }}>
+        <Image src={images[i]?.src ?? ""} alt={images[i]?.title ?? ""} fill className="object-contain" sizes="(max-width: 768px) 100vw, 900px" />
+      </div>
       <p className="mt-3 text-center font-serif text-2xl text-cream">{images[i]?.title}</p>
       <button onClick={prev} aria-label="Previous" className={`${btn} left-2`}><ChevronLeft className="h-5 w-5" /></button>
       <button onClick={next} aria-label="Next" className={`${btn} right-2`}><ChevronRight className="h-5 w-5" /></button>

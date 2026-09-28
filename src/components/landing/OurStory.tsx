@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Img } from "./Lightbox";
 import { go } from "./Navbar";
@@ -24,7 +25,7 @@ export function OurStory({ images, onOpen }: { images: Img[]; onOpen: (i: number
         <div id="gallery" className="grid scroll-mt-16 grid-cols-2 gap-2 p-2 md:grid-cols-4">
           {images.map((im, i) => (
             <div key={im.title} className="reveal group relative h-60 overflow-hidden" style={{ transitionDelay: `${i * 100}ms` }}>
-              <img src={im.src} alt={im.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+              <Image src={im.src} alt={im.title} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-maroon-dark/80 via-transparent to-transparent" />
               <p className="absolute bottom-4 left-5 max-w-[60%] font-serif text-xl leading-tight text-cream">{im.title}</p>
               <button onClick={() => onOpen(i)} aria-label={`View ${im.title}`} className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full border border-cream text-cream transition hover:bg-cream hover:text-maroon focus-visible:outline-2 focus-visible:outline-gold active:scale-90">

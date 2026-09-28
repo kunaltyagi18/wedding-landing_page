@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
@@ -67,14 +68,18 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="font-serif text-[15px] leading-relaxed text-cream/80 italic">
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-gold/20 pt-5">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="h-11 w-11 rounded-full border-2 border-gold/40 object-cover"
-                />
+                <div className="relative h-11 w-11 shrink-0">
+                  <Image
+                    src={t.avatar}
+                    alt={t.name}
+                    fill
+                    sizes="44px"
+                    className="rounded-full border-2 border-gold/40 object-cover"
+                  />
+                </div>
                 <div>
                   <p className="font-serif text-[15px] font-medium text-cream">{t.name}</p>
                   <p className="text-[11px] tracking-widest text-gold/70">{t.city}</p>
@@ -98,14 +103,18 @@ export function Testimonials() {
               ))}
             </div>
             <p className="font-serif text-[15px] leading-relaxed text-cream/80 italic">
-              "{testimonials[active].quote}"
+              &ldquo;{testimonials[active].quote}&rdquo;
             </p>
             <div className="mt-6 flex items-center gap-3 border-t border-gold/20 pt-5">
-              <img
-                src={testimonials[active].avatar}
-                alt={testimonials[active].name}
-                className="h-11 w-11 rounded-full border-2 border-gold/40 object-cover"
-              />
+              <div className="relative h-11 w-11 shrink-0">
+                <Image
+                  src={testimonials[active].avatar}
+                  alt={testimonials[active].name}
+                  fill
+                  sizes="44px"
+                  className="rounded-full border-2 border-gold/40 object-cover"
+                />
+              </div>
               <div>
                 <p className="font-serif text-[15px] font-medium text-cream">{testimonials[active].name}</p>
                 <p className="text-[11px] tracking-widest text-gold/70">{testimonials[active].city}</p>

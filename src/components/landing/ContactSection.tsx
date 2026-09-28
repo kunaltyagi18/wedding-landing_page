@@ -106,10 +106,10 @@ export function ContactSection() {
           <p className="text-[10px] tracking-[0.45em] text-gold">GET IN TOUCH</p>
           <div className="mx-auto mt-3 h-px w-10 bg-gold/50" />
           <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-maroon-dark sm:text-5xl">
-            Let's Plan Your <em className="text-maroon">Forever.</em>
+            Let&apos;s Plan Your <em className="text-maroon">Forever.</em>
           </h2>
           <p className="mx-auto mt-4 max-w-lg font-serif text-[15px] leading-snug text-maroon-dark/70">
-            Tell us a little about your dream — we'd love to hear it.
+            Tell us a little about your dream — we&apos;d love to hear it.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ export function ContactSection() {
             {/* Thin decorative gold divider */}
             <div className="h-px w-full bg-gold/25" />
             <p className="font-serif text-[13px] italic leading-relaxed text-maroon-dark/55">
-              "We respond to all enquiries within 24 hours. Your forever deserves our full attention."
+              &ldquo;We respond to all enquiries within 24 hours. Your forever deserves our full attention.&rdquo;
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export function ContactSection() {
                   Thank You, Your Enquiry is With Us!
                 </h3>
                 <p className="max-w-sm font-serif text-[14px] leading-relaxed text-maroon-dark/65">
-                  We've received your details and will be in touch within 24 hours to begin planning your forever.
+                  We&apos;ve received your details and will be in touch within 24 hours to begin planning your forever.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}

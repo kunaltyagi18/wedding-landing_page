@@ -37,7 +37,7 @@ export function EnquiryModal({ open, onClose }: { open: boolean; onClose: () => 
       {done ? (
         <div className="py-10 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">Thank you</p>
-          <h3 className="mt-3 font-serif text-4xl text-maroon">We'll be in touch <em>soon.</em></h3>
+          <h3 className="mt-3 font-serif text-4xl text-maroon">We&apos;ll be in touch <em>soon.</em></h3>
           <p className="mt-4 text-sm text-maroon-dark/70">Our planners will reach out within 24 hours.</p>
           <button onClick={close} className="mt-8 bg-maroon px-8 py-3 text-sm text-cream transition hover:bg-maroon-dark active:scale-95">Close</button>
         </div>

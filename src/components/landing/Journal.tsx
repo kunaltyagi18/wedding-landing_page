@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
 const posts = [
@@ -61,12 +62,13 @@ export function Journal() {
               aria-label={p.title}
             >
               {/* Image */}
-              <div className="relative overflow-hidden">
-                <img
+              <div className="relative h-56 overflow-hidden">
+                <Image
                   src={p.image}
                   alt={p.title}
-                  loading="lazy"
-                  className="h-56 w-full object-cover transition duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-maroon-dark/0 transition-all duration-300 group-hover:bg-maroon-dark/20" />
               </div>
