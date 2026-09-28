@@ -107,14 +107,24 @@
   animation: fade-in 0.15s ease forwards;
 }
 
-/* Hide Lovable editor badge */
+/* Hide Lovable editor badge — all possible selectors */
 #lovable-badge,
 [data-lovable-badge],
 lovable-badge,
-a[href*="lovable.dev"][style*="fixed"],
-a[href*="lovable.dev"][style*="bottom"] {
+a[href*="lovable.dev"],
+[id*="lovable"],
+[class*="lovable"],
+[data-testid*="lovable"],
+iframe[src*="lovable.dev"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
+

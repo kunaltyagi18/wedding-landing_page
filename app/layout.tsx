@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LovableBadgeRemover } from "./LovableBadgeRemover";
 
 export const metadata: Metadata = {
   title: "Ananta Sutra — Weddings That Feel Like You",
@@ -35,7 +36,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <LovableBadgeRemover />
+        {children}
+      </body>
     </html>
   );
 }
