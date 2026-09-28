@@ -62,7 +62,7 @@ export function Navbar({ onEnquire }: { onEnquire: () => void }) {
       </div>
 
       {open && (
-        <div className="border-t border-gold/20 bg-cream px-6 py-4 lg:hidden animate-fade-in">
+        <div className="absolute left-0 top-full w-full border-b border-t border-gold/20 bg-cream px-6 py-4 lg:hidden animate-fade-in shadow-xl">
           <button onClick={() => nav("top")} className={`${item} block py-2`}>Home</button>
           <button onClick={() => setDrop(!drop)} className={`${item} flex items-center gap-1 py-2`}>Weddings <ChevronDown className="h-4 w-4" /></button>
           {drop && weddings.map((w) => (

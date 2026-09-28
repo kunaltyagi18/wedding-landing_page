@@ -20,7 +20,7 @@ export function Hero({ onEnquire, onVideo }: { onEnquire: () => void; onVideo: (
           <p className="text-[9px] tracking-[0.35em] text-maroon-dark/70 sm:text-[10px]">
             TIMELESS PLANNING &nbsp;|&nbsp; MEANINGFUL MOMENTS &nbsp;|&nbsp; YOURS, ALWAYS
           </p>
-          <h1 className="mt-6 font-serif text-5xl leading-[1.02] text-maroon-dark sm:text-6xl xl:text-[64px]">
+          <h1 className="mt-6 font-serif text-4xl leading-[1.05] text-maroon-dark sm:text-5xl xl:text-[64px]">
             Weddings<br />That Feel Like <em className="text-maroon">You.</em>
           </h1>
           <div className="mt-5 h-px w-12 bg-gold" />
@@ -49,7 +49,7 @@ export function Hero({ onEnquire, onVideo }: { onEnquire: () => void; onVideo: (
             <span className="font-serif text-sm text-maroon-dark">200+ Happy Families</span>
           </div>
         </div>
-        <div className="relative h-72 sm:h-96 lg:h-auto">
+        <div className="relative h-[40vh] min-h-[300px] sm:h-96 lg:h-auto order-first lg:order-last">
           <Image src={hero} alt="Bride and groom under a floral mandap at sunset" fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="absolute inset-0 object-cover" />
           <div className="absolute inset-y-0 left-0 hidden w-32 bg-gradient-to-r from-cream-deep to-transparent lg:block" />
         </div>
